@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Basic Form using Beans</title>
+</head>
+<body>
+<jsp:useBean id="User" class = "JavaBeans_with_webforms.User" scope = "session"></jsp:useBean>
+ <form action = "formValue.jsp">
+ 
+ First Name : <input type = "text" name = "firstname" value = '<jsp:getProperty property="firstname" name="User"/>'>
+ Last Name : <input type = "text" name = "lastname" value = '<jsp:getProperty property="lastname" name="User"/>'>
+ 
+ <input type = "submit" value = "submit">
+</form>
+ 
+</body>
+</html>
